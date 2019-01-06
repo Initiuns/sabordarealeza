@@ -1,0 +1,538 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" href="Imagens/logo_icon2.ico" type="image/x-icon">
+
+	<title>Home - Sabor da Realeza</title>
+
+	<style type="text/css">
+
+		* {
+    		box-sizing: border-box;
+		}
+
+		body {
+			display: flex;
+			margin: 10px;
+			padding: 10px;
+		}
+
+		/* Início do Menu */
+
+		header {
+		  min-height: 55px;
+		  position: fixed;
+		  top: 0;
+		  right: 0;
+		  left: 0;
+		  background-color: #fff;
+		  z-index: 1;
+		  box-shadow: 2px 4px 5px rgba(10, 0, 0, .5);
+		}
+
+		ul li {
+			float: right;
+			padding: 10px;
+			list-style-type: none;
+		}
+
+		li a {
+			text-decoration: none;
+			color: #F37C82;
+			font-family: 'Pacifico', Arial;
+			font-size: 20px;
+			letter-spacing: 5px;
+			padding: 20px;
+		}
+
+		li a:hover {
+			color: #F79D5C; 
+			border-bottom-color: #F56F55;
+			transition: 300ms;
+			border-radius: 10px;
+		}
+
+
+
+
+		.menu ul ul {
+			position: absolute;
+			visibility: hidden;
+			background-color: #fff;
+			width: 80px;
+			border-radius: 10px;
+			transition: 1s;
+			margin: 14px;
+			text-align: center;
+		}
+
+		.menu ul ul li {
+			float: none;
+			border-bottom: solid 1px #ccc;
+		}
+
+	
+
+		/* Final do Menu */
+
+
+
+		/* Informações no meio */
+
+		.texte {
+			font-family: Arial;
+			font-size: 1.1rem;
+			color: #F52F57;
+			position: absolute;
+			left: 0;
+			top: 700px;
+			padding: 10px;
+			margin: 10px;
+			width: 300px;
+		}
+
+		.texte2 {
+			width: 100%;
+			height: 400px;
+			padding: 30px;
+			margin: 0 auto;
+			font-family: Arial;
+			position: absolute;
+			top: 500px;
+			left: 0px;
+			right: 0;
+			font-size: 1.3rem;
+			background-color: #fff;
+			border-radius: 10px;
+			transition: 300ms;
+		}
+
+		.texte2 p {
+			text-align: center;
+			margin: 32px;
+		}
+
+		.cor_lado {
+			border-left: 4px solid #F56F55;
+			padding-left: 16px;
+			font-family: 'Pacifico', Arial;
+			font-size: 2rem;
+			color: #F37C82;
+		}
+
+		h2 {
+			line-height: 3.4rem;
+			font-weight: 800;
+			text-align: center;
+			color: #282828;
+		}
+
+		p {
+			color: #282828;
+		}
+
+		.pponte {
+			width: 100%;
+			height: 500px;
+		}
+
+		/* Final das informações */
+
+		/* Pedaço */
+
+		.parte {
+			background: linear-gradient(-90deg,#ff585a,#f857a5);
+    		padding: 40px 0 120px;
+    		width: 100%;
+    		max-width: 1440px;
+    		margin: 0 auto;
+    		padding: 30px;
+    		position: relative;
+    		top: 1000px;
+    		left: -250px;
+    		display: block;
+		}
+
+		.fund {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			height: 200px;
+			width: 100%;
+			filter: grayscale(0);
+		}
+
+		.fund2 {
+			position: absolute;
+			left: 0;
+			top: 800px;
+			width: 100%;
+		}
+
+		/* Fim do pedaço */
+
+    	.img_img {
+    		background-image: url(teste_pink.png);
+			padding: 30px;
+			width: 100%;
+			height: 500px;
+			font-family: 'Pacifico';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			font-size: 1.3rem;
+			background-color: #fff;
+			transition: 1s;
+	    	}
+
+	    	.img_img:hover {
+	    		transition: 1s;
+	    		filter: none;
+	    	}
+
+	    	.logo {
+	    		width: 100px;
+	    		height: 100px;
+	    		position: absolute;
+	    		top: 0px;
+	    		left: 0px;
+	    	}
+
+	    	section a button {
+	    		margin-top: 50px;
+	    		border: 4px solid #fff;
+	    		color: #fff;
+	    		padding: 20px 55px;
+	    		font-size: 24px;
+	    		font-family: 'Arial';
+	    		font-weight: 700;
+	    		margin-bottom: 190px;
+	    		position: absolute;
+	    		left: 36%;
+	    		top: 360px;
+	    		background-color: transparent;
+	    		box-shadow: 0px 0px 0px rgba(10, 0, 0, .5);
+	    		border-radius: 20px;
+	    		cursor: pointer;
+	    		transition: 1s;
+	    	}
+
+	    	section a button:hover {
+	    		background-color: #fff;
+	    		color: #F37C82;
+	    		border-radius: 5px;
+	    		box-shadow: 5px 5px 50px 5px #000;
+	    		transition: 1s;
+	    		transform: scale(1.1);
+	    	}
+
+	    	section h1 {
+	    		color: #fff;
+	    		position: absolute;
+	    		top: 100px;
+	    		left: 25%;
+	    		font-size: 4em;
+	    		text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.647058823529412);
+	    	}
+	    	section small {
+	    		color: #ccc;
+	    		position: absolute;
+	    		top: 320px;
+	    		left: 40%;
+	    		font-size: 1em;
+	    		text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.647058823529412);
+	    	}
+
+	    	.hist {
+	    		background-color: #F37C82;
+	    		padding-top: 38px;
+	    		padding-bottom: 84px;
+	    		position: absolute;
+	    		width: 100%;
+	    		left: 0;
+	    		right: 0;
+	    		top: 1800px;
+	    	}
+
+	    	.ladinho {
+	    		position: absolute;
+	    		left: 460px;
+	    		top: 30px;
+	    		width: 5%;
+	    		transform: rotate(320deg);
+	    	}
+
+	    	.ladinho2 {
+	    		position: absolute;
+	    		left: 1080px;
+	    		top: 25px;
+	    		width: 5%;
+	    		transform: rotate(390deg);
+	    	}
+
+	    	h2 {
+	    		color: #fff;
+	    		font-size: 2em;
+	    		font-family: 'Pacifico';
+	    	}
+
+	    	hr {
+	    		width: 100%;
+	    		max-width: 394px;
+	    		border-top: 2px solid #fff;
+	    		margin-top: 0;
+	    		margin-bottom: 40px;
+	    		display: block;
+	    		box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.647058823529412);
+	    	}
+
+	    	p {
+	    		color: #fff;
+	    		font-family: 'Arial';
+	    		font-size: 1em;
+	    		margin-left: 40px;
+	    		font-weight: 700;
+	    	}
+
+	    	.whats {
+	    		position: absolute; 
+	    		left: 600px; 
+	    		top: 1140px; 
+	    		color: #F37C82;
+	    	}
+
+	    	.encomenda {
+	    		color: #F37C82; 
+	    		position: absolute; 
+	    		left: 380px; 
+	    		top: 1050px; 
+	    		font-family: 'Pacifico', Arial;
+	    		padding: 20px;
+	    	}
+
+	    		    	/* ---------- FOOTER ------------ */
+
+	    	footer {
+	    		background-color: #F37C82;
+	    		padding-top: 38px;
+	    		padding-bottom: 0;
+	    		position: absolute;
+	    		width: 100%;
+	    		left: 0;
+	    		right: 0;
+	    		bottom: -2000px;
+	    		box-sizing: border-box;
+	    		margin-bottom: 0px;
+	    	}
+
+	    	.barrinha {
+	    		background-color: #F37C82;
+	    		width: 100%;
+	    		height: 50px;
+	    		margin: 0px auto;
+	    		position: relative;
+	    		width: 100%;	    		
+	    	}
+
+	    	.fmenu {
+	    		text-decoration: none;
+	    		color: #fff;
+	    		float: right;
+	    		position: relative;
+	    		top: 0px;
+	    	} 
+
+	    	a {
+	    		text-decoration: none;
+	    		color: #fff;	
+	    		padding: 10px;   		
+	    	}
+
+	    	a:hover {
+				color: #F79D5C;
+	    	}
+
+	    	h5 {
+	    		width: 60%;
+	    		color: #fff;
+	    		font-family: Arial;
+	    		margin: 40px; 
+	    }
+
+	    .telefone {
+	    	color: #fff;
+	    	font-family: Arial;
+	    	font-size: 20px;
+	    	margin : 40px;
+	    }
+	    .email {
+	    	color: #fff;
+	    	font-family: Arial;
+	    	font-size: 20px;
+
+	    }
+
+			/* ------------- FINAL DO FOOTER -----------*/
+
+	</style>
+
+	<!-- Script para os Slides -->
+
+	<script type="text/javascript">
+
+		
+
+	</script>
+
+	<!-- Final do Script -->
+
+</head>
+
+<body>
+
+	<!-- Início do Menu -->
+		
+	<header class="">
+  			
+	  <nav class="menu">
+
+	  	<a href="index.html"><img src="Imagens/logo_icon.png" title="Vá para a Home" class="logo"></a>
+	  	
+
+	    <ul class="teste">
+	      <li>
+	        <a href="formulario.html" title="Contato">Contato</a>
+	      </li>
+	      <li>
+	        <a href="galeria.html" title="Galeria">Bolos</a>
+	        	<ul>
+					<li><a href="#">Bolos</a></li>
+					<li><a href="#">Pães</a></li>
+				</ul>
+	      </li>
+	      <li>
+	        <a href="sobre.html" title="Sobre">Sobre</a>
+	      </li>
+	      <li>
+	        <a href="index.html" title="Home">Home</a>
+	      </li>
+	    </ul>
+	  </nav>
+	</header>
+
+	<!-- Final do menu -->
+
+	<section>
+
+		<div class="img_img">
+
+			<h1 style="font-family: 'Pacifico', Arial;">Sabor da Realeza</h1>
+
+			<br>
+
+			<small>Tornando o mundo mais doce</small>
+
+			<a href="galeria.html"><button>CLIQUE E CONHEÇA</button></a>
+
+		</div>
+
+		<div class="texte2 col-5 col-8 col-s-6 col-s-9">
+
+			<h2 class="cor_lado">Fazemos bolos por encomenda por toda região de Guarulhos</h2>	
+			<img src="Imagens/coroa_rosa.png" class="ladinho2">
+
+			<img src="Imagens/pponte.jpg" class="pponte">
+
+			<br>
+
+			<center><h2 style="color: #F37C82; font-family: 'Pacifico', Arial;" class="cor_lado">Eventos</h2></center>
+
+			<br>
+
+			<strong style="position: absolute; left: 120px; top: 770px; color: #F37C82;" >Aniversários</strong>
+
+
+			<img src="Imagens/aniversário.jpg" style="position: absolute; left: 20px; top: 800px; width: 25%; height: auto; border: 4px solid #fff; box-shadow: 3px 2px 3px #ccc; border-radius: 10px;">
+
+			<br>
+
+			<strong style="position: absolute; left: 520px; top: 770px; color: #F37C82;">Sobremesas e doces deliciosos</strong>
+
+			<img src="Imagens/quindim1.jpg" style="position: absolute; left: 500px; top: 805px; width: 25%; height: auto; border: 4px solid #fff; box-shadow: 3px 2px 3px #ccc; border-radius: 10px;">
+
+			<br>
+
+			<strong style="position: absolute; left: 1090px; top: 770px; color: #F37C82;">Coffe Break</strong>
+
+			<img src="Imagens/coffe.jpg" style="position: absolute; left: 980px; top: 805px; width: 25%; height: auto; border: 4px solid #fff; box-shadow: 3px 2px 3px #ccc; border-radius: 10px;">
+
+			<br>
+
+			<h2 style="color: #F37C82; position: absolute; left: 380px; top: 1050px; font-family: 'Pacifico', Arial;" class="cor_lado">Peça encomenda via WhatsApp<img src="Imagens/whats.png" width="50px" height="50px" style="margin: 10px; position: absolute; right: -70px; top: -10px;"></h2>
+
+			<h4 class="cor_lado encomenda">Ou faça um orçamento sem compromisso</h4>
+
+			<h5 class="cor_lado whats">(11) 9 7665-2551</h5>
+		
+		</div>
+
+	</section>
+
+
+	<div class="hist">
+
+		<h2>Conheça nossa História</h2>
+		<hr>
+
+		<img src="Imagens/horizonte.png" style="float: left;">
+
+		<img src="Imagens/coroa_branca.png" class="ladinho" style="float: right;">
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum nisl in mi aliquet, nec aliquet dui congue. 
+
+		<p>Curabitur turpis libero, pharetra semper arcu ut, mollis consequat nibh. Sed luctus est justo, quis sollicitudin nisl bibendum eget. Nullam sollicitudin laoreet nibh.</p>
+
+		<p>Nunc pretium cursus arcu, eget tristique sem luctus ac. Sed at nulla eu risus pretium posuere. Nulla ac volutpat quam, vitae laoreet justo.</p>
+
+		<p> Vivamus magna est, viverra eget velit quis, ultrices accumsan risus. Sed ut dapibus turpis. Ut sit amet mi est. Vivamus dignissim tellus eget ultrices blandit.</p>
+
+	</div>
+
+	<!-- Rodapé do Site -->
+
+	<footer>
+		<!--<img src="Imagens/logo_icon.png" title="Vá para a Home" alt="Sabor da Realeza">-->
+	<nav class="fmenu">
+			<a href="index.html">Home</a>
+			<a href="sobre.html">Sobre</a>
+			<a href="galeria.html">Bolos</a>
+			<a href="formulario.html">Fale Conosco</a>
+		</nav>
+		<h5>Todas as fotos dos impressos são de caráter ilustrativo. Os acessórios mostrados nas fotos não fazem parte das ofertas e as imagens dos produtos não precificados são meramente ilustrativas. Salvo erros de impressão. Resevamo-nos o direito de corrigir eventuais erros gráficos.</h5>
+		<br>
+		<span class="telefone">
+			<img src="Imagens/icon-telefone.png">  (11) 97665-2551
+		</span>
+
+		<span class="email">
+			<img src="Imagens/icon-email.png">  sabordareleza@outlook.com
+		</span>
+		<div class="barrinha">
+			<center><p>Sabor da Realeza  |  © 2018  -  Todos os direitos reservados<strong> | Phillips Enterprise Technology</strong></p></center>
+		</div>
+	</footer>
+
+	 <!-- Final do Rodapé -->
+
+</body>
+
+</html>

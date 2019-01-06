@@ -1,0 +1,401 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+	<meta charset="utf-8">
+
+	<title>APPROVE !</title>
+
+	<style type="text/css">
+
+
+		body {
+			display: flex;
+			margin: 10px;
+			padding: 10px;
+			/*background-color: #f0ece3;*/
+			/*background-image: linear-gradient(to right, #f0ece3 , #F79D5C);*/
+		}
+
+		/* Início do Menu */
+
+		header {
+		  min-height: 50px;
+		  position: fixed;
+		  top: 0;
+		  right: 0;
+		  left: 0;
+		  border-bottom: 1px solid #ccc;
+		  background: #fff;
+		  z-index: 1;
+		  box-shadow: 2px 4px 5px rgba(10, 0, 0, .5);
+		}
+
+		ul li {
+			float: right;
+			padding: 10px;
+			list-style-type: none;
+		}
+
+		li a {
+			text-decoration: none;
+			color: red; /* #F79D5C */
+			font-family: 'Arial';
+			font-size: 20px;
+		}
+
+		li a:hover {
+			color: #F52F57;
+			border-bottom-color: #F56F55;
+			padding: 2px;
+			transition: 300ms;
+			border-radius: 10px;
+		}
+
+
+
+
+		.menu ul ul {
+			position: absolute;
+			visibility: hidden;
+			background-color: #fff;
+			width: 80px;
+			border-radius: 10px;
+			transition: 1s;
+			margin: 14px;
+			text-align: center;
+		}
+
+		/*.menu ul li:hover ul {
+			visibility: visible;
+			transition: 1s;
+			box-shadow: 0px 0px 50px rgba(10, 0, 0, .5);
+			text-align: center;
+		}*/
+
+		.menu ul ul li {
+			float: none;
+			border-bottom: solid 1px #ccc;
+		}
+
+		.logo {
+			position: absolute;
+			left: 10px;
+			top: 0px;
+			font-family: 'Arial';
+			color: red; /* #F79D5C */
+		}
+
+		/* Final do Menu */
+
+		/* Barra de pesquisa */
+
+		input [type=text] {
+			position: absolute;
+			left: 10px;
+			top: 80px;
+		    width: 130px;
+		    box-sizing: border-box;
+		    border: 1px solid #ccc;
+		    border-radius: 4px;
+		    font-size: 16px;
+		    background-color: white;
+		    background-image: url('searchicon.png');
+		    background-position: 10px 10px; 
+		    background-repeat: no-repeat;
+		    padding: 12px 20px 12px 40px;
+		    -webkit-transition: width 0.4s ease-in-out;
+		    transition: width 0.4s ease-in-out;
+		    box-shadow: 0px 0px 50px rgba(10, 0, 0, .5);
+		}
+
+		input [type=text]:focus {
+	    	width: 50%;
+		}
+
+		/* Final da barrinha */
+
+		/* Subir para o topo */
+
+		[class*=" icon-"], [class^=icon-] {
+		    font-family: icomoon;
+		    speak: none;
+		    font-style: normal;
+		    font-weight: 400;
+		    font-variant: normal;
+		    text-transform: none;
+		    line-height: 1;
+		    -webkit-font-smoothing: antialiased;
+		    -moz-osx-font-smoothing: grayscale;
+		}
+
+		#back-top a {
+			color: #fff;
+			padding: 5px 13px;
+			line-height: 30px;
+		}
+
+		/* Final */
+
+		/* Informações no meio */
+
+		.quad {
+			width: 200px;
+			height: 300px;
+			background-color: #fff;
+			border-radius: 10px;
+			padding: 10px;
+			margin: 50px;
+			position: absolute;
+			left: 100px;
+			top: 900px;
+			box-shadow: 5px 2px 5px 2px #000;
+			transition: 300ms;
+		}
+
+		.quad:hover {
+			transition: 300ms;
+			transform: scale(1.1);
+			box-shadow: 5px 5px 10px 5px #000;
+			/*opacity: 0.6;*/
+		}
+
+		.texte {
+			font-family: Arial;
+			font-size: 1.1rem;
+			color: #F52F57;
+			position: absolute;
+			left: 0;
+			top: 700px;
+			padding: 10px;
+			margin: 10px;
+			width: 300px;
+		}
+
+		.texte2 {
+			width: 100%;
+			padding: 30px;
+			max-width: 1140px;
+			margin: 0 auto;
+			font-family: Arial;
+			position: fixed
+			top: 400px;
+			left: 50%;
+			font-size: 1.3rem;
+			box-shadow: 0px 0px 0px rgba(10, 0, 0, .5);
+			background-color: #fff;
+			box-shadow: 5px 5px 50px 5px #000;
+			border-radius: 10px;
+			transition: 300ms;
+		}
+
+		.texte2:hover {
+			transform: scale(1.1);
+		}
+
+		.texte2 p {
+			text-align: center;
+			margin: 32px;
+		}
+
+		.cor_lado {
+			border-left: 4px solid #F56F55;
+			padding-left: 16px;
+		}
+
+		h2 {
+			line-height: 3.4rem;
+			font-weight: 800;
+			text-align: center;
+			color: #282828;
+		}
+
+		p {
+			color: #282828;
+		}
+
+		/* Final das informações */
+
+		/* Rodapé do Site */
+
+		.footer {
+		  display: block;
+		  padding: 0;
+		  min-height: 50px;
+		  position: fixed;
+		  bottom: 0;
+		  right: 0;
+		  left: 0;
+		  width: 101%;
+		  border-top: 1px solid #ccc;
+		  background: #fff;
+		  z-index: 1;
+		  box-shadow: 0px 0px 50px rgba(10, 0, 0, .5);
+		  margin: -0% -1%;
+		  margin-bottom: -1%;
+		  visibility: hidden;
+		}
+
+
+		.footer:hover {
+			visibility: visible;
+		}
+
+		/* Final do Rodapé */
+
+		/* Pedaço */
+
+		.parte {
+			background: linear-gradient(-90deg,#ff585a,#f857a5);
+    		padding: 40px 0 120px;
+    		width: 100%;
+    		max-width: 1440px;
+    		margin: 0 auto;
+    		padding: 30px;
+    		position: relative;
+    		top: 1000px;
+    		left: -250px;
+    		display: block;
+		}
+
+		.fund {
+			position: absolute;
+			left: 0;
+			height: 800px;
+			width: 100%;
+			
+		}
+
+		.fund2 {
+			position: absolute;
+			left: 0;
+			top: 800px;
+			width: 100%;
+		}
+
+		/* Fim do pedaço */
+
+
+/* :root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40; */
+
+    /* background: linear-gradient(-90deg,#ff585a,#f857a5);
+    	padding: 40px 0 120px; */
+
+	</style>
+
+</head>
+
+<body>
+
+	<p id="back-top" style="display: block;">
+	<a href="#top"><span class="icon-angle-up">
+		::before
+	</span></a></p>
+
+	<!-- Início do Menu -->
+		
+	<header>
+  			
+	  <nav class="menu">
+
+	  	<h1 class="logo" title="Vá para a Home">LOGO
+	  		<a href=""><img src="" ></a>
+	  	</h1>
+
+	    <ul class="teste">
+	      <li>
+	        <a href="Form.html" title="Contato">Contato</a>
+	      </li>
+	      <li>
+	        <a href="#" title="Galeria">Galeria</a>
+	        	<ul>
+					<li><a href="#">Bolos</a></li>
+					<li><a href="#">Pães</a></li>
+				</ul>
+	      </li>
+	      <li>
+	        <a href="#" title="Sobre">Sobre</a>
+	      </li>
+	      <li>
+	        <a href="#" title="Home">Home</a>
+	      </li>
+	    </ul>
+	  </nav>
+	</header>
+
+	<!-- Final do menu -->
+
+		<form>
+  			<input type="text" name="search" placeholder="Faça sua pesquisa meu chapa...">
+		</form>
+
+	<!-- Informações -->
+
+	<section>
+
+		<div class="fund">
+			<!--<img src="Imagens/fundo.png">-->
+			<img src="teste.jpg"></div>
+		</div>
+
+		<div class="quad">
+			
+		</div>
+
+		<!--<div class="texte"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum nisl in mi aliquet, nec aliquet dui congue. Curabitur turpis libero, pharetra semper arcu ut, mollis consequat nibh. Sed luctus est justo, quis sollicitudin nisl bibendum eget. Nullam sollicitudin laoreet nibh. Nunc pretium cursus arcu, eget tristique sem luctus ac. Sed at nulla eu risus pretium posuere. Nulla ac volutpat quam, vitae laoreet justo. Vivamus magna est, viverra eget velit quis, ultrices accumsan risus. Sed ut dapibus turpis. Ut sit amet mi est. Vivamus dignissim tellus eget ultrices blandit.</p></div>-->
+
+		<div class="texte2">
+			<h2 class="cor_lado">Nosso Objetivo</h2>	
+			<p>Proporcionar para nossos clientes da melhor maneira possivel seus paladares com nossos delíciosos bolos de diversos sabores.</p>		
+		</div>
+
+	</section>
+
+	<!--<div class="fund2">
+			<img src="Imagens/fundo.png">
+	</div>-->
+
+	
+
+	<!-- Final das informações -->
+
+
+	<!--<div class="parte"></div>-->
+
+
+
+
+	<!-- Rodapé do Site -->
+
+	<div id="footer"></div>
+
+	<!-- Final do Rodapé -->
+
+</body>
+
+</html>

@@ -1,0 +1,869 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" href="Imagens/logo_icon2.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	<title>Nossos bolos - Sabor da Realeza</title>
+
+	<style type="text/css">
+
+		* {
+    		box-sizing: border-box;
+		}
+
+
+		body {
+			display: flex;
+			margin: 10px;
+			padding: 10px;
+			/*background-color: #f0ece3;*/
+			/*background-image: linear-gradient(to right, #f0ece3 , #F79D5C);*/
+		}
+
+		/* Início do Menu */
+
+		header {
+		  min-height: 55px;
+		  position: fixed;
+		  top: 0;
+		  right: 0;
+		  left: 0;
+		  /*border-bottom: 1px solid #ccc;*/
+		  background-color: #fff;
+		  z-index: 1;
+		  box-shadow: 2px 4px 5px rgba(10, 0, 0, .5);
+		}
+
+		ul li {
+			float: right;
+			padding: 10px;
+			list-style-type: none;
+		}
+
+		li a {
+			text-decoration: none;
+			color: #F37C82; 
+			font-family: 'Pacifico', Arial;
+			font-size: 20px;
+			letter-spacing: 5px;
+			padding: 20px;
+		}
+
+		li a:hover {
+			color: #F79D5C; /*#ffc107*/
+			border-bottom-color: #F56F55;
+			transition: 300ms;
+			border-radius: 10px;
+		}
+
+
+
+
+		.menu ul ul {
+			position: absolute;
+			visibility: hidden;
+			background-color: #fff;
+			width: 80px;
+			border-radius: 10px;
+			transition: 1s;
+			margin: 14px;
+			text-align: center;
+		}
+
+		/*.menu ul li:hover ul {
+			visibility: visible;
+			transition: 1s;
+			box-shadow: 0px 0px 50px rgba(10, 0, 0, .5);
+			text-align: center;
+		}*/
+
+		.menu ul ul li {
+			float: none;
+			border-bottom: solid 1px #ccc;
+		}
+
+		/* Final do Menu */
+
+
+
+		/* Informações no meio */
+
+		.quad {
+			width: 200px;
+			height: 300px;
+			background-color: #fff;
+			border-radius: 10px;
+			padding: 10px;
+			margin: 50px;
+			position: absolute;
+			left: 100px;
+			top: 900px;
+			box-shadow: 5px 2px 5px 2px #000;
+			transition: 300ms;
+		}
+
+		.quad:hover {
+			transition: 300ms;
+			transform: scale(1.1);
+			box-shadow: 5px 5px 10px 5px #000;
+			/*opacity: 0.6;*/
+		}
+
+		.texte {
+			font-family: Arial;
+			font-size: 1.1rem;
+			color: #F52F57;
+			position: absolute;
+			left: 0;
+			top: 700px;
+			padding: 10px;
+			margin: 10px;
+			width: 300px;
+		}
+
+		.texte2 {
+			width: 100%;
+			height: 400px;
+			padding: 30px;
+			margin: 0 auto;
+			font-family: Arial;
+			position: absolute;
+			top: 700px;
+			left: 0px;
+			right: 0;
+			font-size: 1.3rem;
+			/*box-shadow: 0px 0px 0px rgba(10, 0, 0, .5);*/
+			background-color: #fff;
+			/*box-shadow: 5px 5px 50px 5px #000;*/
+			border-radius: 10px;
+			transition: 300ms;
+		}
+
+		.texte2:hover {
+			/*transform: scale(1.1);*/
+		}
+
+		.texte2 p {
+			text-align: center;
+			margin: 32px;
+		}
+
+		.cor_lado {
+			border-left: 4px solid #F56F55;
+			padding-left: 16px;
+		}
+
+		h2 {
+			line-height: 3.4rem;
+			font-weight: 800;
+			text-align: center;
+			color: #282828;
+		}
+
+		p {
+			color: #282828;
+		}
+
+		/* Final das informações */
+
+		/* Rodapé do Site */
+
+		.footer {
+		  display: block;
+		  padding: 0;
+		  min-height: 50px;
+		  position: fixed;
+		  bottom: 0;
+		  right: 0;
+		  left: 0;
+		  width: 101%;
+		  border-top: 1px solid #ccc;
+		  background: #fff;
+		  z-index: 1;
+		  box-shadow: 0px 0px 50px rgba(10, 0, 0, .5);
+		  margin: -0% -1%;
+		  margin-bottom: -1%;
+		  visibility: hidden;
+		}
+
+
+		.footer:hover {
+			visibility: visible;
+		}
+
+		/* Final do Rodapé */
+
+		/* Pedaço */
+
+		.parte {
+			background: linear-gradient(-90deg,#ff585a,#f857a5);
+    		padding: 40px 0 120px;
+    		width: 100%;
+    		max-width: 1440px;
+    		margin: 0 auto;
+    		padding: 30px;
+    		position: relative;
+    		top: 1000px;
+    		left: -250px;
+    		display: block;
+		}
+
+		.fund {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			height: 200px;
+			width: 100%;
+			filter: grayscale(0);
+		}
+
+		.fund2 {
+			position: absolute;
+			left: 0;
+			top: 800px;
+			width: 100%;
+		}
+
+		/* Fim do pedaço */
+
+		/* Responsivo */
+
+		/* For mobile phones: */
+				[class*="col-"] {
+				    width: 100%;
+				}
+				@media only screen and (min-width: 600px) {
+				    /* For tablets: */
+				    .col-s-1 {width: 8.33%;}
+				    .col-s-2 {width: 16.66%;}
+				    .col-s-3 {width: 25%;}
+				    .col-s-4 {width: 33.33%;}
+				    .col-s-5 {width: 41.66%;}
+				    .col-s-6 {width: 50%;}
+				    .col-s-7 {width: 58.33%;}
+				    .col-s-8 {width: 66.66%;}
+				    .col-s-9 {width: 75%;}
+				    .col-s-10 {width: 83.33%;}
+				    .col-s-11 {width: 91.66%;}
+				    .col-s-12 {width: 100%;}
+				}
+				@media only screen and (min-width: 768px) {
+				    /* For desktop: */
+				    .col-1 {width: 8.33%;}
+				    .col-2 {width: 16.66%;}
+				    .col-3 {width: 25%;}
+				    .col-4 {width: 33.33%;}
+				    .col-5 {width: 41.66%;}
+				    .col-6 {width: 50%;}
+				    .col-7 {width: 58.33%;}
+				    .col-8 {width: 66.66%;}
+				    .col-9 {width: 75%;}
+				    .col-10 {width: 83.33%;}
+				    .col-11 {width: 91.66%;}
+				    .col-12 {width: 100%;}
+				}
+
+		/* Fim do Responsivo */
+
+    	.img_img {
+    		background-image: url(teste_.png);
+    		/*filter: blur(5px);*/
+    		height: 200px;
+			padding: 30px;
+			/*max-width: 1140px;*/
+			width: 1349px;
+			height: 500px;
+			/*margin: 0 auto;*/
+			font-family: 'Pacifico';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			font-size: 1.3rem;
+			/*box-shadow: 0px 0px 0px rgba(10, 0, 0, .5);*/
+			background-color: #fff;
+			/*box-shadow: 5px 5px 50px 5px #000;*/
+			transition: 1s;
+	    	}
+
+	    	.img_img:hover {
+	    		transition: 1s;
+	    		filter: none;
+	    	}
+
+	    	.logo {
+	    		width: 100px;
+	    		height: 100px;
+	    		position: absolute;
+	    		top: 0px;
+	    		left: 0px;
+	    	}
+
+	    	section a button {
+	    		margin-top: 50px;
+	    		border: 1px solid #ccc;
+	    		color: #F56F55;
+	    		padding: 20px 55px;
+	    		font-size: 24px;
+	    		font-family: 'Arial';
+	    		font-weight: 700;
+	    		margin-bottom: 190px;
+	    		background-color: transparent;
+	    		box-shadow: 0px 0px 0px rgba(10, 0, 0, .5);
+	    		border-radius: 20px;
+	    		cursor: pointer;
+	    		transition: 1s;
+	    	}
+
+	    	section a button:hover {
+	    		background-color: #fff;
+	    		color: #F56F55;
+	    		border-radius: 5px;
+	    		box-shadow: 5px 5px 50px 5px #000;
+	    		transition: 1s;
+	    		transform: scale(1.1);
+	    	}
+
+	    	section h1 {
+	    		color: #F79D5C; /*#7dd7f9*/
+	    		position: absolute;
+	    		top: 100px;
+	    		left: 25%;
+	    		font-size: 4em;
+	    		text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.647058823529412);
+	    	}
+	    	section small {
+	    		color: #ccc;
+	    		position: absolute;
+	    		top: 320px;
+	    		left: 40%;
+	    		font-size: 1em;
+	    		/*text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.647058823529412);*/
+	    	}
+
+	    	.hist {
+	    		background-color: rgb(251, 193, 134);
+	    		padding-top: 38px;
+	    		padding-bottom: 84px;
+	    		position: absolute;
+	    		width: 100%;
+	    		left: 0;
+	    		right: 0;
+	    		top: 1000px;
+	    	}
+
+	   	h2 {
+	    		color: #fff;
+	    		font-size: 2em;
+	    		/*text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.647058823529412);*/
+	    		font-family: 'Pacifico';
+	    	} 
+
+			/* ------- GALERIA DE PRODUTOS ---------- */
+
+			#produtos{
+			    float: left;
+			    left: 50%;
+			    border-radius: 8px;
+			    width: 100%;
+			    margin: 10px;
+
+			}
+			.produto{
+			    width: 31%;
+			    height: 470px;
+			    margin-top: 25px;
+			    /*border: 1px solid #ddd;*/
+			    border-radius: 10px;
+			    float: left;
+			    margin-left: 10px;
+			    transition: 500ms;
+			    margin-right: 20px;
+			}
+			.produto img{
+			    width: 90%;
+			    margin: 12px;
+			}
+			.produto h1{
+			    font-size: 17px;
+			    margin: 8px;
+
+			}
+			.produto p{
+			    margin: 8px;
+			    font-size: 1em;
+			}
+			.produto h2{
+			    margin: 10px;
+			    font-size: 17px;
+			}
+			.produto h3 {
+				text-align: center;
+				font-family: 'Pacifico', Arial;
+				color: #F37C82;
+			}
+			.produto h3:hover {
+				color: #F79D5C;
+			}
+
+			#bolos:hover {
+				box-shadow: 5px 5px 50px 5px #000;
+	    		transition: 500ms;
+	    		transform: scale(1.1);
+	    		color: #F37C82;
+			}
+
+			/* ---------- FINAL DAS IMAGENS ----------- */
+
+			.brn {
+				width: 100%;
+				height: 100px;
+			}
+
+			h2 {
+				color: #F37C82;
+			}
+
+			hr {
+	    		width: 100%;
+	    		max-width: 394px;
+	    		border-top: 2px solid #F37C82;
+	    		margin-top: 0;
+	    		margin-bottom: 40px;
+	    		display: block;
+	    	}
+
+	    	p {
+	    		color: #fff;
+	    		font-family: 'Arial';
+	    		font-size: 1em;
+	    		margin-left: 40px;
+	    		font-weight: 700;
+	    	}
+
+	    	/* ---------- MODAL ----------- */
+
+			.modal {
+			    display: none; 
+			    position: absolute; 
+			    z-index: 1; 
+			    left: 0;
+			    top: 0;
+			    width: 100%; 
+			    height: 100%; 
+			    overflow: auto; 
+			    background-color: rgb(0,0,0); 
+			    background-color: rgba(0,0,0,0.4);
+
+			}
+
+			.modal-content {
+			    background-color: #fefefe;
+			    margin: 5% auto; 
+			    padding: 20px;
+			    border: 1px solid #888;
+			    width: 80%; 
+			    border-radius: 10px;
+			    transition: 1s;
+				transform: scale(1.1);
+
+				
+			}
+
+
+			.close {
+			    color: #aaa;
+			    float: right;
+			    font-size: 28px;
+			    font-weight: bold;
+			    cursor: pointer;
+			    transition: 800ms;
+				transform: scale(1.1);
+			}
+
+			.close:focus {
+			    color: black;
+			    text-decoration: none;
+			    cursor: pointer;
+			}
+
+			.modelin {
+				border-radius: 10px;
+				border: none;
+				background-color: transparent;
+				color: #F37C82;
+				padding: 20px 55px;
+				font-size: 24px;
+				font-weight: 700;
+				cursor: pointer;
+				transition: 800ms;
+			}
+
+			.modelin:hover {
+				border-radius: 20px;
+				border: 4px solid #F37C82;
+				font-weight: 900;
+				transition: 800ms;
+				transform: scale(1.1);
+				box-shadow: 5px 5px 50px 5px #000;
+			}
+
+			label {
+				color: #F37C82;
+				font-family: 'Pacifico', Arial;
+			}
+
+			textarea {
+    			width: 81%;
+    			height: auto;
+    			line-height: 20px;
+    			min-height: 200px;
+    			border-radius: 10px;
+    			box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    			overflow: hidden;
+    			resize: none;
+			}
+
+			textarea:hover {
+				border: 1px solid #F56F55;
+			}
+
+			 input {
+	    		margin: 10px;
+	    		border : 1px solid #ccc;
+	    		padding: 10px;
+	    		border-radius: 5px;
+	    	}
+
+	    	input:hover {
+	    		border: 1px solid #F56F55;
+	    	}
+
+	    	input:active {
+	    		border: 1px solid #F56F55;
+	    	}
+
+	    	input .morango {
+	    		background-image: url(bolos/png/5.png);
+	    		position: relative;
+	    		right: 0;
+	    		top: 10px;
+	    	}
+
+	    	/* ---------- FINAL DO MODAL ----------- */
+
+
+	    		    	/* ---------- FOOTER ------------ */
+
+	    	footer {
+	    		background-color: #F37C82;
+	    		padding-top: 38px;
+	    		padding-bottom: 0;
+	    		position: absolute;
+	    		width: 100%;
+	    		left: 0;
+	    		right: 0;
+	    		bottom: -1200px;
+	    		box-sizing: border-box;
+	    		margin-bottom: 0px;
+	    	}
+
+	    	.barrinha {
+	    		background-color: #F37C82;
+	    		width: 100%;
+	    		height: 50px;
+	    		margin: 0px auto;
+	    		position: relative;
+	    		width: 100%;	    		
+	    	}
+
+	    	.fmenu {
+	    		text-decoration: none;
+	    		color: #fff;
+	    		float: right;
+	    		position: relative;
+	    		top: 0px;
+	    	} 
+
+	    	a {
+	    		text-decoration: none;
+	    		color: #fff;	
+	    		padding: 10px;   		
+	    	}
+
+	    	a:hover {
+				color: #F79D5C;
+	    	}
+
+	    	h5 {
+	    		width: 60%;
+	    		color: #fff;
+	    		font-family: Arial;
+	    		margin: 40px; 
+	    }
+
+	    .telefone {
+	    	color: #fff;
+	    	font-family: Arial;
+	    	font-size: 20px;
+	    	margin : 40px;
+	    }
+	    .email {
+	    	color: #fff;
+	    	font-family: Arial;
+	    	font-size: 20px;
+
+	    }
+
+	    .enviar {
+	    			margin-top: 50px;
+		    		border: 4px solid #fff;
+		    		color: #F37C82;
+		    		padding: 20px 55px;
+		    		font-size: 24px;
+		    		font-family: 'Arial';
+		    		font-weight: 700;
+		    		margin-bottom: 190px;
+		    		background-color: transparent;
+		    		box-shadow: 0px 0px 0px rgba(10, 0, 0, .5);
+		    		border-radius: 20px;
+		    		cursor: pointer;
+		    		transition: 1s;
+		    		float: right;
+	    	}
+
+	    	.enviar:hover {
+		    		background-color: #fff;
+		    		color: #F56F55;
+		    		border-radius: 5px;
+		    		box-shadow: 5px 5px 50px 5px #000;
+		    		transition: 1s;
+		    		transform: scale(1.1);
+	    	}
+
+			/* ------------- FINAL DO FOOTER -----------*/
+
+	</style>
+
+	<!-- Script para os Slides -->
+
+	<script type="text/javascript">
+
+		
+
+	</script>
+
+	<!-- Final do Script -->
+
+</head>
+
+<body>
+
+	<!-- Início do Menu -->
+		
+	<header class="">
+  			
+	  <nav class="menu">
+
+	  	<a href="index.html"><img src="./Imagens/logo_icon.png" title="Vá para a Home" class="logo"></a>
+	  	
+
+	    <ul class="teste">
+	      <li>
+	        <a href="formulario.html" title="Contato">Contato</a>
+	      </li>
+	      <li>
+	        <a href="galeria.html" title="Galeria">Bolos</a>
+	        	<ul>
+					<li><a href="#">Bolos</a></li>
+					<li><a href="#">Pães</a></li>
+				</ul>
+	      </li>
+	      <li>
+	        <a href="sobre.html" title="Sobre">Sobre</a>
+	      </li>
+	      <li>
+	        <a href="index.html" title="Home">Home</a>
+	      </li>
+	    </ul>
+	  </nav>
+	</header>
+
+	<!-- Final do menu -->
+
+
+	<section>
+
+		<div class="brn"></div>
+
+		<h2>Alguns de nossos Bolos</h2>
+
+		<!-- PRODUTOS -->
+		<div id="produtos">
+
+                	<div class="produto lado1" id="bolos">
+                    	<h3>Bolo de Prestígio com Morango</h3>
+                        <img src="bolos/png/1.png"/>
+                         <p>A nova geração de processadores da AMD Bulldozer já chegou! Baseados na arq..</p>
+                       	<h2>R$12,00</h2>
+                	</div>
+
+                    <div class="produto lado2" id="bolos">
+                    	<h3>Bolo de Prestígio</h3>
+                        <img src="bolos/png/2.png"/>
+                        <p>A nova geração de processadores da AMD Bulldozer já chegou! Baseados na arq..</p>
+                        <h2>R$10,00</h2>
+                    </div>
+
+                    <div class="produto lado3" id="bolos">
+                    	<h3>Bolo de Morango com Chantilly</h3>
+                        <img src="bolos/png/3.png"/>
+                        <p>A nova geração de processadores da AMD Bulldozer já chegou! Baseados na arq..</p>
+                        <h2>R$13,00</h2>
+              		</div>
+              		<div class="produto lado4" id="bolos">
+              			<h3>Bolo de Fubá</h3>
+                        <img src="bolos/png/4.png"/>
+                        <p>A nova geração de processadores da AMD Bulldozer já chegou! Baseados na arq..</p>
+                        <h2>R$14,00</h2>
+              		</div>
+              	    <div class="produto lado5" id="bolos">
+              	    	<h3>Bolo de Morango</h3>
+                        <img src="bolos/png/5.png"/>
+                        <p>A nova geração de processadores da AMD Bulldozer já chegou! Baseados na arq..</p>
+                        <h2>R$10,00</h2>
+              		</div>	
+              		<div class="produto lado6" id="bolos">
+              			<h3>Bolo de Chocolate</h3>
+                        <img src="bolos/png/6.png" height="250px" />
+                        <p>A nova geração de processadores da AMD Bulldozer já chegou! Baseados na arq..</p>
+                        <h2>R$20,00</h2>
+              		</div>
+        </div>
+        <!-- FIM DOS PRODUTOS -->
+
+        	<div class="brn">
+        		<center><button class="modelin" id="myBtn">CLIQUE AQUI E ESCOLHA SEU BOLO !</button></center>
+
+        		<div id="myModal" class="modal">
+
+					 <div class="modal-content">
+					    <span class="close">&times;</span>
+
+					<h2>Deixe algumas informações que nós entraremos em contato com você xD</h2>
+
+					<form method="post" action="grava.jsp">
+
+					<label for>Nome</label>
+			        <br />
+			        <input name="nome" type="text" id="cep" value="" class="tamanho" maxlength="9"
+			         placeholder="Digite seu Nome" name="nome" required autofocus />
+
+			        <br />
+
+					<label for>Escolha seu Bolo</label>
+			        <select name="bolo">
+	          			<option value="morango" class="morango">Bolo de Prestígio com Morango</option>
+	          			<option value="prestigio">Bolo de Prestígio</option>
+	          			<option value="chantilly">Bolo de Morango com Chantilly</option>
+	          			<option value="fuba">Bolo de Fubá</option>
+	          			<option value="chocolate">Bolo de Chocolate</option>
+	        		</select>
+
+	        		 <br />
+
+			        <label for>E-mail</label>
+			        <br />
+			        <input name="email" type="email" name="email" class="tamanho" placeholder="Digite seu E-mail" required/>
+
+			        <br />
+
+			        <label for>Telefone</label>
+			        <br />
+			        <input name="tel" type="text" class="tamanho" placeholder="Digite seu Telefone" required/>
+
+			        <br />
+
+	        		<label for>Mensagem</label>
+	        		</br>
+			        <textarea name="textarea" id="textarea" placeholder="Quer mudar algo ? Fala pra gente xD"></textarea>
+
+			        <button type="submit" class="enviar">Enviar</button>
+
+			   		</form>
+
+					</div>
+	  			</div>
+			</div>
+
+	</section>
+
+
+
+	<!-- Rodapé do Site -->
+
+	<footer>
+		<!--<img src="Imagens/logo_icon.png" title="Vá para a Home" alt="Sabor da Realeza">-->
+		<nav class="fmenu">
+			<a href="index.html">Home</a>
+			<a href="sobre.html">Sobre</a>
+			<a href="galeria.html">Bolos</a>
+			<a href="formulario.html">Fale Conosco</a>
+		</nav>
+		<h5>Todas as fotos dos impressos são de caráter ilustrativo. Os acessórios mostrados nas fotos não fazem parte das ofertas e as imagens dos produtos não precificados são meramente ilustrativas. Salvo erros de impressão. Resevamo-nos o direito de corrigir eventuais erros gráficos.</h5>
+		<br>
+		<span class="telefone">
+			<img src="Imagens/icon-telefone.png">  (11) 97665-2551
+		</span>
+
+		<span class="email">
+			<img src="Imagens/icon-email.png">  sabordareleza@outlook.com
+		</span>
+		<div class="barrinha">
+			<center><p>Sabor da Realeza  |  © 2018  -  Todos os direitos reservados<strong> | Phillips Enterprise Corporation</strong></p></center>
+		</div>
+	</footer>
+
+	 <!-- Final do Rodapé -->
+
+	<script type="text/javascript">
+		// Get the modal
+	var modal = document.getElementById('myModal');
+
+	// Get the button that opens the modal
+	var btn = document.getElementById("myBtn");
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+	// When the user clicks on the button, open the modal 
+	btn.onclick = function() {
+	    modal.style.display = "block";
+	}
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() {
+	    modal.style.display = "none";
+	}
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+	    if (event.target == modal) {
+	        modal.style.display = "none";
+	    }
+	}
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+	<meta charset="utf-8">
+
+	<title>APPROVE !</title>
+
+	<style type="text/css">
+
+
+		body {
+			display: flex;
+			margin: 10px;
+			padding: 10px;
+			/*background-color: #f0ece3;*/
+			background-image: linear-gradient(to right, #f0ece3 , #F79D5C);
+		}
+
+		/* Início do Menu */
+
+		header {
+		  min-height: 50px;
+		  position: fixed;
+		  top: 0;
+		  right: 0;
+		  left: 0;
+		  border-bottom: 1px solid #ccc;
+		  background: #fff;
+		  z-index: 1;
+		  box-shadow: 2px 4px 5px rgba(10, 0, 0, .5);
+		}
+
+		ul li {
+			float: right;
+			padding: 10px;
+			list-style-type: none;
+		}
+
+		li a {
+			text-decoration: none;
+			color: #F79D5C;
+			font-family: 'Arial';
+			font-size: 20px;
+		}
+
+		li a:hover {
+			color: #F52F57;
+		}
+
+		.menu ul ul {
+			position: absolute;
+			visibility: hidden;
+			right: 90px;
+			background-color: #fff;
+			width: 60px;
+
+		}
+
+		.menu ul li:hover ul {
+			visibility: visible;
+		}
+
+		.menu ul ul li {
+			float: none;
+			border-bottom: solid 1px #ccc;
+		}
+
+		.logo {
+			position: absolute;
+			left: 10px;
+			top: 0px;
+			font-family: 'Arial';
+			color: #F79D5C;
+		}
+
+		/* Final do Menu */
+
+		/* Mini-Formulário */
+
+		* {
+		    box-sizing: border-box;
+		}
+
+		input[type=text], select, textarea {
+		    width: 100%;
+		    padding: 12px;
+		    border: 1px solid #ccc;
+		    border-radius: 4px;
+		    resize: vertical;
+		}
+
+		label {
+		    padding: 12px 12px 12px 0;
+		    display: inline-block;
+		}
+
+		input[type=submit] {
+		    background-color: #F79D5C;
+		    color: white;
+		    padding: 12px 20px;
+		    border: none;
+		    border-radius: 4px;
+		    cursor: pointer;
+		    float: right;
+		}
+
+		input[type=submit]:hover {
+		    background-color: #F52F57;
+		}
+
+		.container {
+			position: absolute;
+			width: 80%;
+			height: 60%;
+			top: 80px;
+		    border-radius: 5px;
+		    background-color: #f2f2f2;
+		    padding: 20px;
+		}
+
+		.col-25 {
+		    float: left;
+		    width: 50%;
+		    margin-top: 6px;
+		}
+
+		/*.col-75 {
+		    float: left;
+		    width: 75%;
+		    margin-top: 6px;
+		}*/
+
+		.row:after {
+		    content: "";
+		    display: table;
+		    clear: both;
+		}
+
+		@media screen and (max-width: 600px) {
+		    .col-25, .col-75, input[type=submit] {
+		        width: 100%;
+		        margin-top: 0;
+		    }
+		    .row:after {
+		    	position: absolute;
+		    	top: 100px;
+		    }
+		}
+
+		/* Final do Mini-Formulário */
+
+		/* Subir para o topo */
+
+		[class*=" icon-"], [class^=icon-] {
+		    font-family: icomoon;
+		    speak: none;
+		    font-style: normal;
+		    font-weight: 400;
+		    font-variant: normal;
+		    text-transform: none;
+		    line-height: 1;
+		    -webkit-font-smoothing: antialiased;
+		    -moz-osx-font-smoothing: grayscale;
+		}
+
+		#back-top a {
+			color: #fff;
+			padding: 5px 13px;
+			line-height: 30px;
+		}
+
+		/* Final */
+
+		p {
+	    		color: #fff;
+	    		text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.647058823529412);
+	    		font-family: 'Arial';
+	    		font-size: 1em;
+	    		margin-left: 40px;
+	    		font-weight: 700;
+	    }
+
+	    		    	/* ---------- FOOTER ------------ */
+
+	    	footer {
+	    		background-color: rgb(251, 193, 114);/*#d4a76f;*/
+	    		padding-top: 38px;
+	    		padding-bottom: 0;
+	    		position: absolute;
+	    		width: 100%;
+	    		left: 0;
+	    		right: 0;
+	    		bottom: -1200px;
+	    		box-sizing: border-box;
+	    		margin-bottom: 0px;
+	    	}
+
+	    	.barrinha {
+	    		background-color:  rgb(251, 193, 114);
+	    		width: 100%;
+	    		height: 50px;
+	    		margin: 0px auto;
+	    		position: relative;
+	    		width: 100%;	    		
+	    	}
+
+	    	.fmenu {
+	    		text-decoration: none;
+	    		color: #fff;
+	    		float: right;
+	    		position: relative;
+	    		top: 0px;
+	    	} 
+
+	    	a {
+	    		text-decoration: none;
+	    		color: #fff;	
+	    		padding: 10px;   		
+	    	}
+
+	    	a:hover {
+				color: #F79D5C;
+	    	}
+
+	    	h5 {
+	    		width: 60%;
+	    		color: #fff;
+	    		font-family: Arial;
+	    		margin: 40px; 
+	    }
+
+	    .telefone {
+	    	color: #fff;
+	    	font-family: Arial;
+	    	font-size: 20px;
+	    	margin : 40px;
+	    }
+	    .email {
+	    	color: #fff;
+	    	font-family: Arial;
+	    	font-size: 20px;
+
+	    }
+
+			/* ------------- FINAL DO FOOTER -----------*/
+
+	</style>
+
+</head>
+
+<body>
+
+	<p id="back-top" style="display: block;">
+	<a href="#top"><span class="icon-angle-up">
+		::before
+	</span></a></p>
+
+	<!-- Início do Menu -->
+		
+	<header>
+  			
+	  <nav class="menu">
+
+	  	<h1 class="logo" title="Vá para a Home">AQUI VAI A LOGO
+	  		<a href=""><img src="" ></a>
+	  	</h1>
+
+	    <ul class="teste">
+	      <li>
+	        <a href="#Chaves" title="Contato">Contato</a>
+	      </li>
+	      <li>
+	        <a href="#Chiquinha" title="Galeria">Galeria</a>
+	        	<ul>
+					<li><a href="#">Bolos</a></li>
+					<li><a href="#">Pães</a></li>
+				</ul>
+	      </li>
+	      <li>
+	        <a href="#Seu-Madruga" title="Sobre">Sobre</a>
+	      </li>
+	      <li>
+	        <a href="#Quico" title="Home">Home</a>
+	      </li>
+	    </ul>
+	  </nav>
+	</header>
+
+	<!-- Final do menu -->
+
+	<!-- Mini-Formulário -->
+
+		<div class="container">
+	  <form action="/action_page.php">
+	    <div class="row">
+	      <div class="col-25">
+	        <label for="fname">Escreva seu Nome</label>
+	      </div>
+	      <div class="col-75">
+	        <input type="text" id="fname" name="firstname" placeholder="Qual é o seu nome amiguinho ? ">
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-25">
+	        <label for="lname">Agora o seu e-mail</label>
+	      </div>
+	      <div class="col-75">
+	        <input type="text" id="lname" name="lastname" placeholder="Agora me manda seu e-mail pra gente bater um lero...">
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-25">
+	        <label for="country">De que Cidade você é ?</label>
+	      </div>
+	      <div class="col-75">
+	        <select id="country" name="country">
+	          <option value="australia">Guarulhos</option>
+	          <option value="canada">São Paulo</option>
+	          <option value="usa">Osasco</option>
+	        </select>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="col-25">
+	        <label for="subject">Sugestões ? Sou todo ouvidos :D</label>
+	      </div>
+	      <!--<div class="col-75">
+	        <textarea id="subject" name="subject" placeholder="Fala comigo vai.." style="height:200px"></textarea>
+	      </div>
+	    </div>-->
+	    <br>
+	    <div class="row">
+	      <input type="submit" value="Pode mandar !">
+	    </div>
+	  </form>
+	</div>
+
+	<!-- Final do Mini-Formulário -->
+
+	<!-- Rodapé do Site -->
+
+	<footer>
+		<!--<img src="Imagens/logo_icon.png" title="Vá para a Home" alt="Sabor da Realeza">-->
+		<nav class="fmenu">
+			<a href="index.html">Home</a>
+			<a href="sobre.html">Sobre</a>
+			<a href="galeria.html">Bolos</a>
+			<a href="formulario.html">Fale Conosco</a>
+		</nav>
+		<h5>Todas as fotos dos impressos são de caráter ilustrativo. Os acessórios mostrados nas fotos não fazem parte das ofertas e as imagens dos produtos não precificados são meramente ilustrativas. Salvo erros de impressão. Resevamo-nos o direito de corrigir eventuais erros gráficos.</h5>
+		<br>
+		<span class="telefone">
+			<img src="Imagens/icon-telefone.png">  (11) 97665-2551
+		</span>
+
+		<span class="email">
+			<img src="Imagens/icon-email.png">  sabordareleza@outlook.com
+		</span>
+		<div class="barrinha">
+			<center><p>Sabor da Realeza  |  © 2018  -  Todos os direitos reservados<strong> | Phillips Enterprise Corporation</strong></p></center>
+		</div>
+	</footer>
+
+	 <!-- Final do Rodapé -->
+
+</body>
+
+</html>

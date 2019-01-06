@@ -1,0 +1,447 @@
+* {
+    		box-sizing: border-box;
+		}
+
+
+		body {
+			display: flex;
+			margin: 10px;
+			padding: 10px;
+			background-repeat: no-repeat;
+		}
+
+		/* Início do Menu */
+
+		header {
+		  min-height: 50px;
+		  position: fixed;
+		  top: 0;
+		  right: 0;
+		  left: 0;
+		  border-bottom: 1px solid #ccc;
+		  background: #fff;
+		  z-index: 1;
+		  box-shadow: 2px 4px 5px rgba(10, 0, 0, .5);
+		}
+
+		ul li {
+			float: right;
+			padding: 10px;
+			list-style-type: none;
+		}
+
+		li a {
+			text-decoration: none;
+			color: red; /* #F79D5C */
+			font-family: 'Pacifico', Arial;
+			/*text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.647058823529412);*/
+			letter-spacing: 5px;
+			font-size: 20px;
+		}
+
+		li a:hover {
+			color: #ffc107;
+			border-bottom-color: #F56F55;
+			transition: 300ms;
+			border-radius: 10px;
+		}
+
+
+
+
+		.menu ul ul {
+			position: absolute;
+			visibility: hidden;
+			background-color: #fff;
+			width: 80px;
+			border-radius: 10px;
+			transition: 1s;
+			margin: 14px;
+			text-align: center;
+		}
+
+		/*.menu ul li:hover ul {
+			visibility: visible;
+			transition: 1s;
+			box-shadow: 0px 0px 50px rgba(10, 0, 0, .5);
+			text-align: center;
+		}*/
+
+		.menu ul ul li {
+			float: none;
+			border-bottom: solid 1px #ccc;
+		}
+
+		.logo {
+			position: absolute;
+			left: 10px;
+			top: 0px;
+			font-family: 'Arial';
+			color: red; /* #F79D5C */
+		}
+
+		/* Final do Menu */
+
+		/* Barra de pesquisa */
+
+		input [type=text] {
+			position: absolute;
+			left: 10px;
+			top: 80px;
+		    width: 130px;
+		    box-sizing: border-box;
+		    border: 1px solid #ccc;
+		    border-radius: 4px;
+		    font-size: 16px;
+		    background-color: white;
+		    background-image: url('searchicon.png');
+		    background-position: 10px 10px; 
+		    background-repeat: no-repeat;
+		    padding: 12px 20px 12px 40px;
+		    -webkit-transition: width 0.4s ease-in-out;
+		    transition: width 0.4s ease-in-out;
+		    box-shadow: 0px 0px 50px rgba(10, 0, 0, .5);
+		}
+
+		input [type=text]:focus {
+	    	width: 50%;
+		}
+
+		/* Final da barrinha */
+
+		/* Subir para o topo */
+
+		[class*=" icon-"], [class^=icon-] {
+		    font-family: icomoon;
+		    speak: none;
+		    font-style: normal;
+		    font-weight: 400;
+		    font-variant: normal;
+		    text-transform: none;
+		    line-height: 1;
+		    -webkit-font-smoothing: antialiased;
+		    -moz-osx-font-smoothing: grayscale;
+		}
+
+		#back-top a {
+			color: #fff;
+			padding: 5px 13px;
+			line-height: 30px;
+		}
+
+		/* Final */
+
+		/* Informações no meio */
+
+		.quad {
+			width: 200px;
+			height: 300px;
+			background-color: #fff;
+			border-radius: 10px;
+			padding: 10px;
+			margin: 50px;
+			position: absolute;
+			left: 100px;
+			top: 900px;
+			box-shadow: 5px 2px 5px 2px #000;
+			transition: 300ms;
+		}
+
+		.quad:hover {
+			transition: 300ms;
+			transform: scale(1.1);
+			box-shadow: 5px 5px 10px 5px #000;
+			/*opacity: 0.6;*/
+		}
+
+		.texte {
+			font-family: Arial;
+			font-size: 1.1rem;
+			color: #F52F57;
+			position: absolute;
+			left: 0;
+			top: 700px;
+			padding: 10px;
+			margin: 10px;
+			width: 300px;
+		}
+
+		.cor_lado {
+			border-left: 4px solid #F56F55;
+			padding-left: 16px;
+		}
+
+		h2 {
+			line-height: 3.4rem;
+			font-weight: 800;
+			text-align: center;
+			color: #282828;
+		}
+
+		p {
+			color: #282828;
+		}
+
+		/* Final das informações */
+
+		/* Rodapé do Site */
+
+		.footer {
+		  display: block;
+		  padding: 0;
+		  min-height: 50px;
+		  position: fixed;
+		  bottom: 0;
+		  right: 0;
+		  left: 0;
+		  width: 101%;
+		  border-top: 1px solid #ccc;
+		  background: #fff;
+		  z-index: 1;
+		  box-shadow: 0px 0px 50px rgba(10, 0, 0, .5);
+		  margin: -0% -1%;
+		  margin-bottom: -1%;
+		  visibility: hidden;
+		}
+
+
+		.footer:hover {
+			visibility: visible;
+		}
+
+		/* Final do Rodapé */
+
+		/* Pedaço */
+
+		.parte {
+			background: linear-gradient(-90deg,#ff585a,#f857a5);
+    		padding: 40px 0 120px;
+    		width: 100%;
+    		max-width: 1440px;
+    		margin: 0 auto;
+    		padding: 30px;
+    		position: relative;
+    		top: 1000px;
+    		left: -250px;
+    		display: block;
+		}
+
+		.fund {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			height: 200px;
+			width: 100%;
+			filter: grayscale(0);
+		}
+
+		.fund2 {
+			position: absolute;
+			left: 0;
+			top: 800px;
+			width: 100%;
+		}
+
+		/* Fim do pedaço */
+
+    	.img_img {
+    		background-image: url(../teste.jpg);
+    		filter: blur(5px);
+    		height: 200px;
+			padding: 30px;
+			/*max-width: 1140px;*/
+			width: 1349px;
+			height: 500px;
+			/*margin: 0 auto;*/
+			font-family: Arial;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			font-size: 1.3rem;
+			/*box-shadow: 0px 0px 0px rgba(10, 0, 0, .5);*/
+			background-color: #fff;
+			/*box-shadow: 5px 5px 50px 5px #000;*/
+			transition: 1s;
+	    	}
+
+	    	.img_img:hover {
+	    		transition: 1s;
+	    		filter: none;
+	    	}
+
+	    	/* Formulário */
+
+	    	h1 {
+	    		color: red;
+	    		font-family: 'Pacifico', Arial;
+	    		position: relative;
+	    		top: 100px;
+	    		left: -150px;
+	    	}
+
+	    	h4 {
+	    		color: red;
+	    		font-family: 'Pacifico', Arial;
+	    		position: relative;
+	    		top: 150px;
+	    		left: -200px;
+	    	}
+
+	    	.esquerda {
+	    		position: absolute;
+	    		top: 300px;
+	    		left: 100px;
+	    		padding: 10px;
+	    		border-radius: 5px;
+	    		width: 80%;
+	    	}
+
+	    	.esquerda input {
+	    		margin: 10px;
+	    		border : 1px solid #ccc;
+	    		padding: 10px;
+	    		border-radius: 5px;
+	    	}
+
+	    	.esquerda input:hover {
+	    		border: 1px solid #F56F55;
+	    	}
+
+	    	.esquerda input:active {
+	    		border: 1px solid #F56F55;
+	    	}
+
+	    	.esquerda textarea {
+    			width: 81%;
+    			height: auto;
+    			line-height: 20px;
+    			min-height: 200px;
+    			border-radius: 10px;
+    			box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    			overflow: hidden;
+    			resize: none;
+			}
+
+			.esquerda textarea:hover {
+				border: 1px solid #F56F55;
+			}
+
+			.esquerda select {
+				border-radius: 5px;
+				padding: 10px;
+				margin: 5px;
+			}
+
+			.tamanho {
+				width: 80%;
+			}
+
+			label {
+				color: red;
+				font-family: 'Pacifico', Arial;
+			}
+
+			.esquerda button {
+	    			margin-top: 50px;
+		    		border: 4px solid #fff;
+		    		color: #ff3300;
+		    		padding: 20px 55px;
+		    		font-size: 24px;
+		    		font-family: 'Arial';
+		    		font-weight: 700;
+		    		margin-bottom: 190px;
+		    		background-color: transparent;
+		    		box-shadow: 0px 0px 0px rgba(10, 0, 0, .5);
+		    		border-radius: 20px;
+		    		cursor: pointer;
+		    		transition: 1s;
+	    	}
+
+	    	.esquerda button:hover {
+		    		background-color: #fff;
+		    		color: #F56F55;
+		    		border-radius: 5px;
+		    		box-shadow: 5px 5px 50px 5px #000;
+		    		transition: 1s;
+		    		transform: scale(1.1);
+	    	}
+
+
+
+	    	/* Fim do Formulário */
+
+	    	.logo {
+	    		width: 100px;
+	    		height: 100px;
+	    		position: absolute;
+	    		top: -20px;
+	    		left: 0px;
+	    	}
+
+		p {
+	    		color: #fff;
+	    		text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.647058823529412);
+	    		font-family: 'Arial';
+	    		font-size: 1em;
+	    		margin-left: 40px;
+	    		font-weight: 700;
+	    }
+
+	    		    	/* ---------- FOOTER ------------ */
+
+	    	footer {
+	    		background-color: rgb(251, 193, 114);/*#d4a76f;*/
+	    		padding-top: 38px;
+	    		padding-bottom: 0;
+	    		position: absolute;
+	    		width: 100%;
+	    		left: 0;
+	    		right: 0;
+	    		bottom: -1200px;
+	    		box-sizing: border-box;
+	    		margin-bottom: 0px;
+	    	}
+
+	    	.barrinha {
+	    		background-color:  rgb(251, 193, 114);
+	    		width: 100%;
+	    		height: 50px;
+	    		margin: 0px auto;
+	    		position: relative;
+	    		width: 100%;	    		
+	    	}
+
+	    	.fmenu {
+	    		text-decoration: none;
+	    		color: #fff;
+	    		float: right;
+	    		position: relative;
+	    		top: 0px;
+	    	} 
+
+	    	a {
+	    		text-decoration: none;
+	    		color: #fff;	
+	    		padding: 10px;   		
+	    	}
+
+	    	a:hover {
+				color: #F79D5C;
+	    	}
+
+	    .telefone {
+	    	color: #fff;
+	    	font-family: Arial;
+	    	font-size: 20px;
+	    	margin : 40px;
+	    }
+	    .email {
+	    	color: #fff;
+	    	font-family: Arial;
+	    	font-size: 20px;
+
+	    }
+
+			/* ------------- FINAL DO FOOTER -----------*/

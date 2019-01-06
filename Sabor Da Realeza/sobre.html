@@ -1,0 +1,575 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" href="Imagens/logo_icon2.ico" type="image/x-icon">
+
+	<title>Sobre nós - Sabor da Realeza</title>
+
+	<style type="text/css">
+
+		* {
+    		box-sizing: border-box;
+		}
+
+
+		body {
+			display: flex;
+			margin: 10px;
+			padding: 10px;
+			/*background-color: #f0ece3;*/
+			/*background-image: linear-gradient(to right, #f0ece3 , #F79D5C);*/
+		}
+
+		/* Início do Menu */
+
+		header {
+		  min-height: 55px;
+		  position: fixed;
+		  top: 0;
+		  right: 0;
+		  left: 0;
+		  /*border-bottom: 1px solid #ccc;*/
+		  background-color: #fff;
+		  z-index: 1;
+		  box-shadow: 2px 4px 5px rgba(10, 0, 0, .5);
+		}
+
+		ul li {
+			float: right;
+			padding: 10px;
+			list-style-type: none;
+		}
+
+		li a {
+			text-decoration: none;
+			color: #F37C82; 
+			font-family: 'Pacifico', Arial;
+			font-size: 20px;
+			padding: 20px;
+		}
+
+		li a:hover {
+			color: #F79D5C; /*#ffc107*/
+			border-bottom-color: #F56F55;
+			transition: 300ms;
+			border-radius: 10px;
+		}
+
+		.menu ul ul {
+			position: absolute;
+			visibility: hidden;
+			background-color: #fff;
+			width: 80px;
+			border-radius: 10px;
+			transition: 1s;
+			margin: 14px;
+			text-align: center;
+		}
+
+		.menu ul ul li {
+			float: none;
+			border-bottom: solid 1px #ccc;
+		}
+
+		/* Final do Menu */
+
+
+
+		/* Informações no meio */
+
+		.quad {
+			width: 200px;
+			height: 300px;
+			background-color: #fff;
+			border-radius: 10px;
+			padding: 10px;
+			margin: 50px;
+			position: absolute;
+			left: 100px;
+			top: 900px;
+			box-shadow: 5px 2px 5px 2px #000;
+			transition: 300ms;
+		}
+
+		.quad:hover {
+			transition: 300ms;
+			transform: scale(1.1);
+			box-shadow: 5px 5px 10px 5px #000;
+			/*opacity: 0.6;*/
+		}
+
+		.texte {
+			font-family: Arial;
+			font-size: 1.1rem;
+			color: #F52F57;
+			position: absolute;
+			left: 0;
+			top: 700px;
+			padding: 10px;
+			margin: 10px;
+			width: 300px;
+		}
+
+		.texte2 {
+			width: 100%;
+			height: 400px;
+			padding: 30px;
+			margin: 0 auto;
+			font-family: Arial;
+			position: absolute;
+			top: 700px;
+			left: 0px;
+			right: 0;
+			font-size: 1.3rem;
+			/*box-shadow: 0px 0px 0px rgba(10, 0, 0, .5);*/
+			background-color: #fff;
+			/*box-shadow: 5px 5px 50px 5px #000;*/
+			border-radius: 10px;
+			transition: 300ms;
+		}
+
+		.texte2:hover {
+			/*transform: scale(1.1);*/
+		}
+
+		.texte2 p {
+			text-align: center;
+			margin: 32px;
+		}
+
+		.cor_lado {
+			border-left: 4px solid #F56F55;
+			padding-left: 16px;
+			color: #F37C82;
+		}
+
+		h2 {
+			line-height: 3.4rem;
+			font-weight: 800;
+			text-align: center;
+			color: #282828;
+		}
+
+		p {
+			color: #282828;
+		}
+
+		/* Final das informações */
+
+		/* Rodapé do Site */
+
+		.footer {
+		  display: block;
+		  padding: 0;
+		  min-height: 50px;
+		  position: fixed;
+		  bottom: 0;
+		  right: 0;
+		  left: 0;
+		  width: 101%;
+		  border-top: 1px solid #ccc;
+		  background: #fff;
+		  z-index: 1;
+		  box-shadow: 0px 0px 50px rgba(10, 0, 0, .5);
+		  margin: -0% -1%;
+		  margin-bottom: -1%;
+		  visibility: hidden;
+		}
+
+
+		.footer:hover {
+			visibility: visible;
+		}
+
+		/* Final do Rodapé */
+
+		/* Pedaço */
+
+		.parte {
+			background: linear-gradient(-90deg,#ff585a,#f857a5);
+    		padding: 40px 0 120px;
+    		width: 100%;
+    		max-width: 1440px;
+    		margin: 0 auto;
+    		padding: 30px;
+    		position: relative;
+    		top: 1000px;
+    		left: -250px;
+    		display: block;
+		}
+
+		.fund {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			height: 200px;
+			width: 100%;
+			filter: grayscale(0);
+		}
+
+		.fund2 {
+			position: absolute;
+			left: 0;
+			top: 800px;
+			width: 100%;
+		}
+
+		/* Fim do pedaço */
+
+    	.img_img {
+    		background-color: #ccc;
+    		/*filter: blur(5px);*/
+    		height: 200px;
+			padding: 30px;
+			width: 1349px;
+			height: 500px;
+			font-family: 'Pacifico';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			font-size: 1.3rem;
+			background-color: #fff;
+			transition: 1s;
+	    	}
+
+	    	.img_img:hover {
+	    		transition: 1s;
+	    		filter: none;
+	    	}
+
+	    	.logo {
+	    		width: 100px;
+	    		height: 100px;
+	    		position: absolute;
+	    		top: 0px;
+	    		left: 0px;
+	    	}
+
+	    	section a button {
+	    		margin-top: 50px;
+	    		border: 4px solid #fff;
+	    		color: #fff;
+	    		padding: 20px 55px;
+	    		font-size: 24px;
+	    		font-family: 'Arial';
+	    		font-weight: 700;
+	    		margin-bottom: 190px;
+	    		position: absolute;
+	    		left: 36%;
+	    		top: 360px;
+	    		background-color: transparent;
+	    		box-shadow: 0px 0px 0px rgba(10, 0, 0, .5);
+	    		border-radius: 20px;
+	    		cursor: pointer;
+	    		transition: 1s;
+	    	}
+
+	    	section a button:hover {
+	    		background-color: #fff;
+	    		color: #F56F55;
+	    		border-radius: 5px;
+	    		box-shadow: 5px 5px 50px 5px #000;
+	    		transition: 1s;
+	    		transform: scale(1.1);
+	    	}
+
+	    	section h1 {
+    			color: #F37C82;
+	    		position: absolute;
+	    		top: 100px;
+	    		left: 25%;
+	    		font-size: 4em;
+	    	}
+	    	section small {
+	    		color: #ccc;
+	    		position: absolute;
+	    		top: 320px;
+	    		left: 40%;
+	    		font-size: 1em;
+	    		text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.647058823529412);
+	    	}
+
+	    	.hist {
+	    		background-color: #F37C82;
+	    		padding-top: 38px;
+	    		padding-bottom: 144px;
+	    		position: absolute;
+	    		width: 100%;
+	    		left: 0;
+	    		right: 0;
+	    		top: 700px;
+	    	}
+
+	    	.comprometimento {
+	    		color: #fff; 
+	    		font-family: 'Pacifico', Arial; 
+	    		position: absolute; 
+	    		top: 190px; 
+	    		left: 27px; 
+	    		font-weight: 900;
+	    	}
+
+	    	.integridade {
+	    		color: #fff; 
+	    		font-family: 'Pacifico', Arial; 
+	    		position: absolute; 
+	    		top: 210px; 
+	    		left: 47%; 
+	    		font-weight: 900;
+	    	}
+
+	    	.confianca {
+	    		color: #fff; 
+	    		font-family: 'Pacifico', Arial; 
+	    		position: absolute; 
+	    		top: 210px; 
+	    		left: 86%; 
+	    		font-weight: 900;
+	    	}
+
+	    	h2 {
+	    		color: #fff;
+	    		font-size: 2em;
+	    		font-family: 'Pacifico';
+	    	}
+
+	    	hr {
+	    		width: 100%;
+	    		max-width: 394px;
+	    		border-top: 2px solid #fff;
+	    		margin-top: 0;
+	    		margin-bottom: 40px;
+	    		display: block;
+	    		box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.647058823529412);
+	    	}
+
+	    	p {
+	    		color: #fff;
+	    		font-family: 'Arial';
+	    		font-size: 1em;
+	    		margin-left: 40px;
+	    		font-weight: 700;
+	    	}
+
+	    	.alinha {
+	    		width: 600px;
+	    		height: 420px;
+	    		position: absolute;
+	    		left: 380px;
+	    		top: 200px;
+	    		padding: 10px;
+	    	}
+
+	    	.p1 {
+	    		position: relative;
+	    		left: 0;
+	    	}
+
+	    	.p2 {
+	    		position: relative;
+	    	}
+
+	    		    	/* ---------- FOOTER ------------ */
+
+	    	footer {
+	    		background-color: #F37C82;
+	    		padding-top: 38px;
+	    		padding-bottom: 0;
+	    		position: absolute;
+	    		width: 100%;
+	    		left: 0;
+	    		right: 0;
+	    		bottom: -1300px;
+	    		box-sizing: border-box;
+	    		margin-bottom: 0px;
+	    	}
+
+	    	.barrinha {
+	    		background-color: #F37C82;
+	    		width: 100%;
+	    		height: 50px;
+	    		margin: 0px auto;
+	    		position: relative;
+	    		width: 100%;	    		
+	    	}
+
+	    	.fmenu {
+	    		text-decoration: none;
+	    		color: #fff;
+	    		float: right;
+	    		position: relative;
+	    		top: 0px;
+	    	} 
+
+	    	a {
+	    		text-decoration: none;
+	    		color: #fff;	
+	    		padding: 10px;   		
+	    	}
+
+	    	a:hover {
+				color: #F79D5C;
+	    	}
+
+	    	h5 {
+	    		width: 60%;
+	    		color: #fff;
+	    		font-family: Arial;
+	    		margin: 40px; 
+	    }
+
+	    .telefone {
+	    	color: #fff;
+	    	font-family: Arial;
+	    	font-size: 20px;
+	    	margin : 40px;
+	    }
+	    .email {
+	    	color: #fff;
+	    	font-family: Arial;
+	    	font-size: 20px;
+
+	    }
+
+			/* ------------- FINAL DO FOOTER -----------*/
+
+	</style>
+
+	<!-- Script para os Slides -->
+
+	<script type="text/javascript">
+
+		
+
+	</script>
+
+	<!-- Final do Script -->
+
+</head>
+
+<body>
+
+	<!-- Início do Menu -->
+		
+	<header class="">
+  			
+	  <nav class="menu">
+
+	  	<a href="index.html"><img src="Imagens/logo_icon.png" title="Vá para a Home" class="logo"></a>
+	  	
+
+	    <ul class="teste">
+	      <li>
+	        <a href="formulario.html" title="Contato">Contato</a>
+	      </li>
+	      <li>
+	        <a href="galeria.html" title="Galeria">Bolos</a>
+	        	<ul>
+					<li><a href="#">Bolos</a></li>
+					<li><a href="#">Pães</a></li>
+				</ul>
+	      </li>
+	      <li>
+	        <a href="sobre.html" title="Sobre">Sobre</a>
+	      </li>
+	      <li>
+	        <a href="index.html" title="Home">Home</a>
+	      </li>
+	    </ul>
+	  </nav>
+	</header>
+
+	<!-- Final do menu -->
+
+	<!-- Informações -->
+
+	<section>
+
+
+		<div class="img_img">
+
+			<h1>Sobre a Confeitaria</h1>
+			<br>
+			<img src="Imagens/logo.png" class="alinha">
+
+		</div>
+
+	</section>
+
+	<div class="hist">
+
+		<img src="Imagens/missaovisaoevalores.png" style="position: absolute; top: -130px; left: 30%; width: 40%;">
+		<div style="position: absolute; left: 0px; width: 30%;">
+		<h2>Conheça nossa Missão</h2>
+		<hr>
+		<p class="p1">Proporcionar para nossos clientes da melhor maneira possivel seus paladares com nossos delíciosos bolos de diversos sabores.</p>
+		</div>
+
+		<div style="position: absolute; right: 0px; width: 30%;">
+			<h2>Nossa Visão</h2>
+			<hr>
+
+		<p class="p2"> Ser referência em bolos caseiros.
+						Ser exemplo em condutas e processos.
+						Ser inspiração para o resgate de valores,
+						construindo pontes entre as pessoas.</p>
+		</div>
+
+		<div style="position: relative; top: 100px;">
+				<h2>Valores</h2>
+				<hr>
+
+		<img src="Imagens/comprometimento.png" style="width: 15%; ">
+		<h3 class="comprometimento"><u>Comprometimento</u></h3>
+
+		<img src="Imagens/integridade.png" style="width: 10%;  position: relative; left: 30%; top: 0px;">
+		<h3 class="integridade"><u>Integridade</u></h3>
+
+		<img src="Imagens/confianca.png" style="width: 15%;  float: right;">
+		<h3 class="confianca"><u>Confiança</u></h3>
+
+		</div>
+
+
+		<!--A verdadeira medida de um homem não se vê na forma como ele se comporta em momentos de conforto e conveniência, mas em como se mantém em tempos de controvérsias e deseafios - Martin Luther King-->
+
+	</div>
+
+
+	<!-- Rodapé do Site -->
+
+	<footer>
+		<nav class="fmenu">
+			<a href="index.html">Home</a>
+			<a href="sobre.html">Sobre</a>
+			<a href="galeria.html">Bolos</a>
+			<a href="formulario.html">Fale Conosco</a>
+		</nav>
+		<h5>Todas as fotos dos impressos são de caráter ilustrativo. Os acessórios mostrados nas fotos não fazem parte das ofertas e as imagens dos produtos não precificados são meramente ilustrativas. Salvo erros de impressão. Resevamo-nos o direito de corrigir eventuais erros gráficos.</h5>
+		<br>
+		<span class="telefone">
+			<img src="Imagens/icon-telefone.png">  (11) 97665-2551
+		</span>
+
+		<span class="email">
+			<img src="Imagens/icon-email.png">  sabordareleza@outlook.com
+		</span>
+		<div class="barrinha">
+			<center><p>Sabor da Realeza  |  © 2018  -  Todos os direitos reservados<strong> | Phillips Enterprise Corporation</strong></p></center>
+		</div>
+	</footer>
+
+	 <!-- Final do Rodapé -->
+
+</body>
+
+</html>
